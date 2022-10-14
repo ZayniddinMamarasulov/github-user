@@ -1,7 +1,7 @@
 class QuoteModel {
-  String id;
-  String content;
-  String author;
+  String? id;
+  String? content;
+  String? author;
 
   QuoteModel({
     required this.id,
@@ -10,9 +10,9 @@ class QuoteModel {
   });
 
   factory QuoteModel.fromJson(Map<String, dynamic> jsonData) {
-    String id = jsonData['_id'] as String;
-    String content = jsonData['content'] as String;
-    String author = jsonData['author'] as String;
+    String id = jsonData['_id'] ?? "" as String;
+    String content = jsonData['content'] ?? "" as String;
+    String author = jsonData['author'] ?? "" as String;
     return QuoteModel(
       id: id,
       content: content,

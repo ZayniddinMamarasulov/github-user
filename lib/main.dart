@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:github_users/screens/github_users_page.dart';
 import 'package:github_users/screens/home_page.dart';
 
 void main() {
@@ -11,7 +12,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: HomePage(),
+      debugShowCheckedModeBanner: false,
+      home: GithubUsersPage(),
     );
   }
 }
