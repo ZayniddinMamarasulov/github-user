@@ -42,8 +42,7 @@ class _GithubUsersPageState extends State<GithubUsersPage> {
       body: SafeArea(
         child: FutureBuilder<List<User>?>(
           future: getResult,
-          builder:
-              (BuildContext context, AsyncSnapshot<List<User>?> snapshot) {
+          builder: (BuildContext context, AsyncSnapshot<List<User>?> snapshot) {
             if (snapshot.connectionState == ConnectionState.waiting) {
               return Container(
                 height: MediaQuery.of(context).size.height,
