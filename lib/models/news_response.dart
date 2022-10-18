@@ -1,4 +1,4 @@
-import 'news_model.dart';
+import 'news/news_model.dart';
 
 class NewsResponse {
   int? statusCode;

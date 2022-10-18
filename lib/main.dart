@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:github_users/screens/github_users_page.dart';
-import 'package:github_users/screens/home_page.dart';
-import 'package:github_users/screens/news_page.dart';
+import 'package:github_users/screens/news_page2.dart';
 
 void main() {
   runApp(const MyApp());

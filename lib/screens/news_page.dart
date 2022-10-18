@@ -1,11 +1,11 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:github_users/models/news_model.dart';
+import 'package:github_users/models/news/news_model.dart';
 import 'package:github_users/models/news_response.dart';
 import 'package:http/http.dart' as http;
 
-import '../models/article_model.dart';
+import '../models/article/article_model.dart';
 
 class NewsPage extends StatefulWidget {
   const NewsPage({Key? key}) : super(key: key);
@@ -18,12 +18,14 @@ class _NewsPageState extends State<NewsPage> {
   Future<News>? news;
 
   Future<News?> getNews() async {
-    String apiKey = "1b1677681e3f4c6980f50921844ba0e0";
+    String apiKey = "cf269556cda842548e35e58d9e8f4f0a0";
     String url = "https://newsapi.org/v2/everything"
         "?q=tesla"
-        "&from=2022-09-15"
+        "&from=2022-09-17"
         "&sortBy=publishedAt"
         "&apiKey=$apiKey";
+
+    print("----->>>>>>> ${url}");
 
     var response = await http.get(Uri.parse(url));
 
@@ -59,7 +61,7 @@ class _NewsPageState extends State<NewsPage> {
           return Container(
             child: Center(
               child: Text(
-                "Nimdir xatolik bor",
+                "Nimadir xatolik bor",
                 style: TextStyle(fontSize: 24),
               ),
             ),
